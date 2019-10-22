@@ -1,0 +1,81 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(){
+  int A,B,C,i;
+  time_t t;
+  srand((unsigned) time(&t));
+
+  puts("Vamos jogar um jogo matemtico!");
+  puts("Q1-Resolva a soma abaixo!\n");
+  A = rand()%100;
+  B = rand()%100;
+  printf("%d + %d = ?\n",A,B);
+  puts("Digite sua resposta..");
+  scanf("%d",&C);
+
+  if(C==A+B){
+    puts("Correto!\n");
+    i++;
+  } else{
+    puts("Você errou!\n");
+  }
+
+  puts("Q2-Resolva a multiplicação abaixo!\n");
+  A = rand()%100;
+  B = rand()%100;
+  printf("%d x %d = ?\n",A,B);
+  puts("Digite sua resposta!");
+  scanf("%d",&C);
+  if(C==A*B){
+    puts("Você acertou!\n");
+    i++;
+  }
+  else{
+    puts("Resposta errada!\n");
+  }
+  puts("Q3-Resolva a divisão abaixo!\n");
+  A = rand()%100;
+  B = rand()%100;
+  printf("%d / %d = ?\n",A,B);
+  puts("Digite sua resposta abaixo");
+  scanf("%d",&C);
+  if(C==A/B){
+    puts("Parabens,certa resposta!\n");
+    i++;
+  }
+  else{
+    puts("Você errou,estude mais na proxima!\n");
+  }
+  puts("Q4-Resolva a subtracao abaixo!\n");
+  A = rand()%100;
+  B = rand()%100;
+  printf("%d - %d = ?\n",A,B);
+  puts("Digite a resposta..");
+  scanf("%d",&C);
+  if(C==A-B){
+    puts("Parabens,voce acertou!\n");
+    i++;
+  }
+  else{
+    puts("Que pena,voce errou\n");
+  }
+  printf("Voce acertou %d/4!\n",i);
+  if(i==0){
+    printf("Voce precisa estudar mais!");
+  }
+  if(i==1){
+    printf("Voce precisa melhorar!");
+  }
+  if(i==2){
+    printf("Podia ser melhor!");
+  }
+  if(i==3){
+    printf("Voce foi bem!");
+  }
+  if(i==4){
+    printf("Parabens,voce acertou todas! Havard deseja te contratar!");
+  }
+  return 0;
+}
